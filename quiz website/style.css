@@ -1,3 +1,5 @@
+
+
 #header {
   display: flex;
   justify-content: space-between;
@@ -95,7 +97,7 @@
   width: 200px;
   height: 200px;
 }
-.stars {
+/* .stars {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -104,7 +106,7 @@
   text-align: center;
   margin-left: 70px;
   color: gray;
-}
+} */
 
 .shp {
   height: 40px;
@@ -149,10 +151,15 @@
   color: red;
 }
 
-.star:hover {
+/* .star:hover {
   color: yellow;
-  /* fill:black ; */
+} */
+
+.star.active {
+  color: gold;
 }
+
+
 .words {
   text-align: center;
   font-weight: 9000;
@@ -528,4 +535,55 @@ footer a {
   .sidebar.active {
     transform: translateX(0);
   }
+}
+
+/* 
+ David
+*/
+
+.imgCont {
+  width: 250px;
+  height: 250px;
+}
+
+.imgCont > img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.des {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.price {
+  position: absolute;
+  top: -20px;
+  right: 5px;
+  display: flex;
+  gap:10px
+}
+
+
+.des span {
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.des h5 {
+  margin-top: 5px;
+}
+
+.stars {
+  width: 100% !important;
+}
+
+.star:hover {
+  color: gold;
 }
