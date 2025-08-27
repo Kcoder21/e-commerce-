@@ -1,0 +1,141 @@
+#header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background-color: white;
+  box-shadow: 0 5px 15px rgb(57, 57, 57);
+
+}
+.logo{
+  height: 100px;
+  width: 100px;
+}
+#navbar{
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+#navbar li{
+padding:0 20px ;
+list-style: none;
+position: relative;
+}
+#navbar li a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  color: rgb(96, 96, 96);
+  transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active{
+  color: #b4ae7d;
+}
+#navbar li a.active::after,
+#navbar li a:hover:after{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background-color: #b4ae7d;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+.About p{
+  color: black;
+  font-weight: 300;
+  font-family:'Times New Roman', Times, serif;
+  display: flex;
+  text-align: center;
+}
+.About_Us{
+ text-align:center;
+}
+#mobile {
+  display: flex;
+  align-items: center;
+}
+
+#mobile li {
+  margin-bottom: 25px;
+}
+
+#mobile i {
+  color: black;
+  font-size: 24px;
+  padding-left: 20px;
+}
+
+@media (max-width: 799px) {
+  #navbar {
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 200px;
+    background-color: rgb(35, 35, 35);
+    box-shadow: 80px 0 0 10px; */
+    box-shadow: 80px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(35, 35, 35);
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    top: 0px;
+    bottom: 0;
+    transform: translateX(80%) translateY(100%);
+  }
+  #navbar.active {
+    right: 0px;
+    transform: translateX(40%)translateY(-10%);
+  }
+  #navbar li {
+    margin-bottom: 25px;
+  }
+
+  #mobile {
+    display: none;
+    align-items: center;
+
+  }
+  #mobile svg {
+    color: #1a1a1a;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+#toggleSidebar {
+    position: fixed;
+    left: 10px;
+   
+    width: 50px;
+    /* margin-left: 00px; */
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: black;
+    z-index: 99999;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+}
+
+.About p{
+max-width: 900px;
+margin: 0 auto ;
+}

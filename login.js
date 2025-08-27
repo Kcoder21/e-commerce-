@@ -1,0 +1,1 @@
+var LoginForm = document.getElementById("LoginForm")

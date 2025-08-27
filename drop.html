@@ -1,0 +1,95 @@
+<!-- Sidebar Toggle Button -->
+<button id="toggleSidebar">☰ Menu</button>
+
+<!-- Sidebar -->
+<div id="sidebar">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Shop</a></li>
+    <li><a href="#">About</a></li>
+    <li class="dropdown">
+      <a href="#" onclick="toggleDropdown()">More ▼</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+<style>
+    /* Sidebar base styles */
+#sidebar {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  transition: left 0.3s ease;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidebar ul li a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+#sidebar ul li a:hover {
+  background-color: #575757;
+}
+
+/* Toggle button */
+#toggleSidebar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1100;
+  background-color: #333;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+  display: none;
+  background-color: #444;
+}
+
+.dropdown-menu li a {
+  padding-left: 30px;
+}
+
+/* Sidebar active */
+#sidebar.active {
+  left: 0;
+}
+
+</style>
+
+<script>
+  const sidebar = document.getElementById("sidebar");
+  const toggleBtn = document.getElementById("toggleSidebar");
+
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+  });
+
+  function toggleDropdown() {
+    const dropdown = document.querySelector(".dropdown-menu");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+  }
+</script>
