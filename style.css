@@ -43,18 +43,14 @@
   bottom: -4px;
   left: 20px;
 }
-#hero {
-  background-image: url(./Screenshot\ 2025-08-09\ 233511.png);
-  height: 90vh;
-  width: 79%;
-  background-size: cover;
-  background-position: top 25% right;
-  padding: 0 80px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #fdfbfc;
+
+#hero .description {
+margin-top: 0px;
+}
+#hero img{
+  width: 500px;
+  margin-left: 400px;
+  margin-bottom: ;
 }
 #hero h4 {
   font-weight: 400;
@@ -162,7 +158,7 @@
 
 .words {
   text-align: center;
-  font-weight: 9000;
+  font-size: 25px;
   color: #4d3211;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-style: italic;
@@ -587,3 +583,113 @@ footer a {
 .star:hover {
   color: gold;
 }
+.hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem 8%;
+      background: #ededed;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.8rem 1.8rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background-color: #d97706;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background-color: #b45309;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: #333;
+      border: 2px solid #ccc;
+    }
+
+    .btn-secondary:hover {
+      border-color: #999;
+      color: #000;
+    }
+
+    .hero-image {
+      max-width: 420px;
+      width: 100%;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+      .pro button {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .pro button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .pro button:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .hero-text {
+        margin-bottom: 2rem;
+      }
+
+      .btn-group {
+        justify-content: center;
+      }
+    }
